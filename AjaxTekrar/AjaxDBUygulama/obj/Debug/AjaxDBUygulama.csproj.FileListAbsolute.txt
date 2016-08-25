@@ -1,0 +1,7 @@
+c:\users\gökçen\documents\visual studio 2013\Projects\AjaxTekrar\AjaxDBUygulama\bin\AjaxDBUygulama.dll.config
+c:\users\gökçen\documents\visual studio 2013\Projects\AjaxTekrar\AjaxDBUygulama\bin\AjaxDBUygulama.dll
+c:\users\gökçen\documents\visual studio 2013\Projects\AjaxTekrar\AjaxDBUygulama\bin\AjaxDBUygulama.pdb
+c:\users\gökçen\documents\visual studio 2013\Projects\AjaxTekrar\AjaxDBUygulama\bin\Newtonsoft.Json.dll
+c:\users\gökçen\documents\visual studio 2013\Projects\AjaxTekrar\AjaxDBUygulama\obj\Debug\AjaxDBUygulama.csprojResolveAssemblyReference.cache
+c:\users\gökçen\documents\visual studio 2013\Projects\AjaxTekrar\AjaxDBUygulama\obj\Debug\AjaxDBUygulama.dll
+c:\users\gökçen\documents\visual studio 2013\Projects\AjaxTekrar\AjaxDBUygulama\obj\Debug\AjaxDBUygulama.pdb
