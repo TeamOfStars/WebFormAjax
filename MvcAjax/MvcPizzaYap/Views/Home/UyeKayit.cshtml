@@ -1,0 +1,35 @@
+﻿@using MvcPizzaYap.Models
+@model Uye
+@{
+    ViewBag.Title = "UyeKayit";
+}
+
+<h2>UyeKayit</h2>
+
+@using (Ajax.BeginForm(new AjaxOptions { OnSuccess = "Kayit" }))
+{
+    <label>AD </label>   <br />
+    @Html.TextBoxFor(p => p.Ad)    <br />
+    <label>soyad </label>    <br />
+    @Html.TextBoxFor(p => p.Soad)    <br />
+    <label>mail </label>    <br />
+    @Html.TextBoxFor(p => p.Mail)    <br />
+    <label>şifre </label>    <br />
+    @Html.TextBoxFor(p => p.Sifre)    <br />
+    <input id="btnKayit" type="submit" value="Kayıt Ol"  />
+}
+<script>
+    function Kayit() {
+        $.ajax({
+            url: "/Home/UyeKayit",
+            type: "post",
+            dataType: "Json",
+            success: function (result) {
+                window.location.href = "http://localhost:30008/Home/UyeGiris";
+            },
+            error: function (error) {
+                alert(error.message);
+            }
+        })
+    }
+</script>

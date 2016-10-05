@@ -1,0 +1,81 @@
+﻿@model MvcAjaxApp.Models.Employee
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee Listesi</h2>
+<input type="button" id="btnGetir" value="Emp Listele" onclick="EmplistGetir()" />
+
+<script type="text/javascript">
+
+    
+    function EmplistGetir() {
+        $.ajax({
+            url: '/Employee/ReturnList/'+ID,
+            //url:"@Url.Action("ReturnList", "Employee")",
+            type: "POST",
+            dataType: 'json',
+            success: function (result) {
+            },
+            fail: function (error) {
+                alert("hata var");
+            }
+        })
+    }
+</script>
+<input type="text" id="txtEmpId" placeholder="ID girin" />
+<input type="button" name="btnShowEmpInfo" value="Çalışan Bilgisini Göster" onclick="ShowInfo()" />
+<div id="tablo">
+
+</div>
+<script>
+    function ShowInfo() {
+        var selectedId = $("#txtEmpId").val();
+        $.ajax({
+            url: "/Employee/ReturnEmploye/",
+            dataType: 'json',
+            data: { 'Id': selectedId },
+            type: 'post',
+            success: function (result) {
+                var olustur = "<table border='1'>";
+                olustur += "<tr><td>" + result.FirstName + "</td><td>" + result.LastName + "</td></tr></table>";
+                document.getElementById("tablo").innerHTML = olustur;
+            },
+            fail: function () {
+                alert("Başarısız");
+            }
+        })
+
+    }
+</script>
+
+
+
+@*@using (Ajax.BeginForm("ReturnList", "Employee", FormMethod.Post, new AjaxOptions { OnSuccess = "success", OnFailure="Fail" }))
+    {
+
+        <input type="submit" name="btnList" value="Listele " />
+
+    }
+
+    @using (Ajax.BeginForm("ReturnEmploye", "Employee", FormMethod.Post, new AjaxOptions { OnSuccess = "success", OnFailure = "Fail" }))
+    {
+        @Html.TextBoxFor(p=>p.EmployeeID)
+        <input type="submit" name="btnAra" value="Ara " />
+
+    }*@
+
+@*<script type="text/javascript">
+
+        function success(result) {
+
+            alert("başarılı");
+            alert(result.FirstName);
+        }
+
+        function Fail(error) {
+
+            alert(error.message);
+        }
+
+    </script>*@

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SiparisModelStoreContainer" CdmEntityContainer="SiparisEntities">
+    <EntitySetMapping Name="Siparisler">
+      <EntityTypeMapping TypeName="SiparisModel.Siparisler">
+        <MappingFragment StoreEntitySet="Siparisler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UyeId" ColumnName="UyeId" />
+          <ScalarProperty Name="UrunId" ColumnName="UrunId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Urun">
+      <EntityTypeMapping TypeName="SiparisModel.Urun">
+        <MappingFragment StoreEntitySet="Urun">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
+          <ScalarProperty Name="UrunFiyat" ColumnName="UrunFiyat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uye">
+      <EntityTypeMapping TypeName="SiparisModel.Uye">
+        <MappingFragment StoreEntitySet="Uye">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soad" ColumnName="Soad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
